@@ -1,0 +1,1508 @@
+/* Stili generali */
+body {
+    font-family: 'Lora', serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    background: linear-gradient(to right, #d4bfb9, #2d2b29); /* Gradiente di sfondo */
+    color: #282321;
+}
+
+h1, h2, h3 {
+    font-family: 'Poppins', sans-serif;
+    color: #b2efef;
+    font-weight: bold;
+}
+
+p {
+    font-family: 'Lora', serif;
+    font-size: 1rem;
+    line-height: 1.5;
+}
+
+/* Barra di navigazione */
+nav {
+    background-color: #373433;
+    padding: 15px 20px;
+    color: white;
+    text-align: center;
+}
+
+.menu-icon {
+    display: none;
+    cursor: pointer;
+}
+
+#menu {
+    display: flex;
+    list-style: none;
+    justify-content: center;
+}
+
+#menu li {
+    margin: 0 15px;
+}
+
+#menu a {
+    color: white;
+    text-decoration: none;
+    font-size: 18px;
+}
+
+/* Layout principale */
+section {
+    padding: 20px;
+    margin: 20px 0;
+}
+
+/* Hero Section con effetto Parallax */
+.hero {
+    background: url('https://via.placeholder.com/1200x400') no-repeat center center/cover;
+    background-attachment: fixed;
+    height: 300px;
+    text-align: center;
+    color: white;
+    padding: 50px 20px;
+}
+
+.hero h1 {
+    font-size: 2.5rem;
+}
+
+/* Servizi */
+.servizio {
+    text-align: center;
+    margin: 20px;
+    background-color: #fff;
+    padding: 20px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+    transition: transform 0.3s ease;
+}
+
+.servizio img {
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+    margin-bottom: 15px;
+    transition: transform 0.3s ease;
+}
+
+.servizio:hover {
+    transform: scale(1.05);
+}
+
+.servizio i {
+    font-size: 40px;
+    color: #a0f2d8;
+    margin-bottom: 10px;
+}
+
+.servizio:hover img {
+    transform: scale(1.1);
+}
+
+/* Footer */
+footer {
+    background-color: #e3b296;
+    color: white;
+    padding: 20px;
+    text-align: center;
+}
+
+.social-icons a {
+    color: white;
+    font-size: 24px;
+    margin: 0 10px;
+    text-decoration: none;
+}
+
+.social-icons a:hover {
+    color: #99f0cc;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .menu-icon {
+        display: block;
+        color: white;
+        font-size: 30px;
+        padding: 10px;
+    }
+
+    #menu {
+        display: none;
+        flex-direction: column;
+        align-items: center;
+        position: absolute;
+        top: 50px;
+        background-color: #1d1c1b;
+        width: 100%;
+        transition: transform 0.3s ease-in-out;
+    }
+
+    #menu.show {
+        display: flex;
+        transform: translateY(0);
+    }
+
+    .servizio {
+        width: 100%;
+    }
+
+    .hero h1 {
+        font-size: 1.8rem;
+    }
+
+    h2, h3 {
+        font-size: 1.5rem;
+    }
+}
+#testimonianze {
+    background-color: #f8f8f8;
+    padding: 50px 20px;
+    text-align: center;
+}
+
+.testimonianza {
+    background-color: white;
+    padding: 20px;
+    margin: 20px auto;
+    width: 80%;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.testimonianza p {
+    font-size: 1rem;
+    line-height: 1.5;
+}
+
+.testimonianza strong {
+    display: block;
+    font-size: 1.1rem;
+    margin-top: 10px;
+    color: #a6eeba;
+}
+
+.testimonianza:hover {
+    transform: scale(1.05);
+    transition: transform 0.3s ease-in-out;
+}
+#contatti {
+    padding: 50px 20px;
+    text-align: center;
+    background-color: #f4f4f4;
+}
+
+form {
+    max-width: 600px;
+    margin: 0 auto;
+    background-color: white;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+form div {
+    margin-bottom: 15px;
+    text-align: left;
+}
+
+form label {
+    font-size: 1rem;
+    display: block;
+}
+
+form input, form textarea {
+    width: 100%;
+    padding: 10px;
+    font-size: 1rem;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+form button {
+    background-color: #88edce;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    font-size: 1rem;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+form button:hover {
+    background-color: #ff4500;
+}
+#loader {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(255, 255, 255, 0.7);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+}
+
+.spinner {
+    border: 4px solid #f3f3f3; 
+    border-top: 4px solid #aaa3a2; 
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+-----------------Stile per i Parrucchieri--------------------
+#parrucchieri {
+    padding: 50px 20px;
+    text-align: center;
+    background-color: #f8f8f8;
+}
+
+.parrucchiere {
+    display: inline-block;
+    width: 30%;
+    margin: 15px;
+    text-align: center;
+}
+
+.parrucchiere img {
+    border-radius: 50%;
+    width: 150px;
+    height: 150px;
+    margin-bottom: 15px;
+}
+
+.parrucchiere h3 {
+    font-size: 1.5rem;
+    color: #b0dcfc;
+}
+
+.parrucchiere p {
+    font-size: 1rem;
+    color: #555;
+}
+/* Stili per la sezione servizi */
+#servizi {
+    display: flex;
+    justify-content: space-around;
+    margin: 20px;
+}
+
+.servizio {
+    background-color: #f9f9f9;
+    padding: 15px;
+    border-radius: 8px;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    width: 30%;
+}
+
+#servizi h3 {
+    color: #201f1f;
+}
+
+/* Stili per le testimonianze */
+#testimonianze {
+    text-align: center;
+    padding: 20px;
+    background-color: #fff;
+    margin: 20px;
+    border-radius: 8px;
+    box-shadow: 0px 4px 
+}
+/* Stilizzazione per il prezzo dei servizi */
+.prezzo {
+    font-size: 1.2em;
+    font-weight: bold;
+    color: #4CAF50; /* Colore verde per il prezzo */
+    margin-top: 10px;
+}
+/* Stilizzazione per la durata dei servizi */
+.durata {
+    font-size: 1em;
+    font-style: italic;
+    color: #888; /* Colore grigio per la durata */
+    margin-top: 5px;
+}
+/* Stilizzazione per il bottone di prenotazione */
+.btn-prenotazione {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #4CAF50;
+    color: white;
+    font-weight: bold;
+    text-align: center;
+    text-decoration: none;
+    border-radius: 5px;
+    margin-top: 10px;
+    transition: background-color 0.3s ease;
+}
+
+.btn-prenotazione:hover {
+    background-color: #45a049;
+}
+/* Stili per la sezione FAQ */
+#faq {
+    background-color: #f1f1f1;
+    padding: 20px;
+    border-radius: 8px;
+    margin-top: 30px;
+}
+
+.faq-item {
+    margin-bottom: 15px;
+}
+
+.faq-item h3 {
+    font-size: 1.2em;
+    color: #181615;
+}
+
+.faq-item p {
+    font-size: 1em;
+    color: #666;
+    padding-left: 15px;
+}
+/* Stili per il calendario */
+#calendario {
+    text-align: center;
+    margin-top: 40px;
+}
+
+#calendar {
+    max-width: 900px;
+    margin: 0 auto;
+}
+/* Stili per la sezione contatti */
+#contatti {
+    padding: 40px;
+    background-color: #f1f1f1;
+}
+
+.contatti-container {
+    display: flex;
+    justify-content: space-around;
+    margin-top: 20px;
+}
+
+.contatto {
+    text-align: center;
+    font-size: 1.2em;
+    color: #5f5e5d;
+    text-decoration: none;
+    padding: 10px;
+}
+
+.contatto i {
+    font-size: 2em;
+    margin-bottom: 10px;
+}
+
+.contatto:hover {
+    color: #4CAF50;
+}
+/* Impostazione colori base */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f9; /* Colore di sfondo chiaro */
+    color: #0e0d0d; /* Testo principale */
+    margin: 0;
+    padding: 0;
+}
+
+/* Header */
+header {
+    background-color: #4CAF50; /* Colore verde per l'header */
+    padding: 20px;
+    color: white;
+    text-align: center;
+}
+
+header h1 {
+    margin: 0;
+    font-size: 2.5em;
+}
+
+/* Sezione Servizi */
+#servizi {
+    background-color: #fff; /* Bianco per il contenuto */
+    padding: 40px 0;
+    text-align: center;
+}
+
+#servizi h2 {
+    color: #4CAF50; /* Verde per i titoli */
+}
+
+.servizio {
+    display: inline-block;
+    width: 30%;
+    margin: 15px;
+    background-color: #f9f9f9;
+    border-radius: 10px;
+    padding: 20px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.servizio i {
+    font-size: 3em;
+    color: #4CAF50;
+}
+
+.servizio h3 {
+    color: #edb081;
+}
+
+.servizio p {
+    font-size: 1.1em;
+    color: #666;
+}
+
+/* Pulsante */
+button {
+    background-color: #4CAF50; /* Verde per il pulsante */
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    font-size: 1em;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #45a049; /* Colore più scuro quando si passa sopra */
+}
+
+/* Form Prenotazioni */
+form {
+    display: grid;
+    gap: 15px;
+    max-width: 400px;
+    margin: 0 auto;
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+form label {
+    font-weight: bold;
+    color: #333;
+}
+
+form select, form input[type="date"] {
+    width: 100%;
+    padding: 8px;
+    margin-top: 5px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+}
+
+/* Sezione Testimonianze */
+#testimonianze {
+    background-color: #e0f2f1; /* Aggiungi un colore chiaro e fresco per la sezione */
+    padding: 30px 0;
+}
+
+.testimonial {
+    max-width: 600px;
+    margin: 0 auto 20px;
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.testimonial p {
+    font-size: 1.1em;
+    color: #555;
+}
+
+.testimonial p:last-child {
+    font-style: italic;
+    color: #333;
+}
+
+/* Modalità scura */
+body.dark-mode {
+    background-color: #201e1d;
+    color: #fff;
+}
+
+body.dark-mode header {
+    background-color: #1a1a1a;
+}
+
+body.dark-mode button {
+    background-color: #131211;
+}
+
+body.dark-mode .servizio {
+    background-color: #201f1e;
+}
+
+body.dark-mode #testimonianze {
+    background-color: #080807;
+}
+
+body.dark-mode .testimonial {
+    background-color: #3f3f39;
+}
+@media (max-width: 768px) {
+    .form-group {
+        margin-bottom: 1rem;
+    }
+
+    .form-button {
+        font-size: 1rem;
+    }
+
+    table {
+        width: 100%;
+    }
+
+    table th, table td {
+        font-size: 0.9rem;
+        padding: 12px;
+    }
+}
+/* Impostazioni di base */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    background-color: #F2F2F2; /* Beige morbido */
+    color: #f1bea9; /* Testo scuro per contrasto */
+    line-height: 1.6;
+}
+
+/* Barra di navigazione */
+nav {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    background-color: #A8D0E6; /* Blu pastello */
+    padding: 20px 30px;
+    z-index: 10;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+}
+
+nav a {
+    text-decoration: none;
+    color: #333; /* Testo scuro per i link */
+    font-size: 18px;
+    font-weight: 600;
+    padding: 10px;
+    transition: color 0.3s ease;
+}
+
+nav a:hover {
+    color: #dcf6dc; /* Verde salvia per hover */
+}
+
+/* Sezione Hero */
+.hero {
+    background: linear-gradient(120deg, #A8D0E6, #F2F2F2); /* Gradiente morbido tra blu e beige */
+    color: #f9c1ab;
+    text-align: center;
+    padding: 120px 20px;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    background-position: center;
+    background-size: cover;
+    position: relative;
+}
+
+/* Animazione di apparizione */
+@keyframes fadeInUp {
+    0% {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Testo della sezione Hero */
+.hero h1 {
+    font-size: 3.5rem;
+    font-weight: 700;
+    margin-bottom: 20px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    animation: fadeInUp 1s ease-out;
+}
+
+.hero p {
+    font-size: 1.2rem;
+    font-weight: 300;
+    max-width: 750px;
+    margin: 20px auto;
+    animation: fadeInUp 1.5s ease-out;
+}
+
+/* Bottone scroll-effect */
+.scroll-effect {
+    margin-top: 50px;
+    color: white;
+    font-size: 18px;
+    cursor: pointer;
+    padding: 12px 30px;
+    background-color: #B0C4B1; /* Verde salvia */
+    border-radius: 30px;
+    transition: background-color 0.3s ease;
+}
+
+.scroll-effect:hover {
+    background-color: #A8D0E6; /* Blu pastello per hover */
+}
+
+/* Responsività per mobile */
+@media (max-width: 768px) {
+    .hero h1 {
+        font-size: 2.5rem;
+    }
+
+    .hero p {
+        font-size: 1.1rem;
+    }
+
+    .scroll-effect {
+        font-size: 16px;
+    }
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    margin: 0;
+    padding: 0;
+}
+
+header {
+    background-color: #1f1f1f;
+    color: white;
+    padding: 15px;
+}
+
+header nav .logo a {
+    font-size: 24px;
+    font-weight: bold;
+    color: white;
+    text-decoration: none;
+}
+
+header nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+header nav ul li {
+    display: inline;
+    margin-right: 20px;
+}
+
+header nav ul li a {
+    color: white;
+    text-decoration: none;
+}
+
+.hero {
+    background-color: #626a75;
+    color: white;
+    text-align: center;
+    padding: 100px 0;
+}
+
+footer {
+    background-color: #333;
+    color: white;
+    text-align: center;
+    padding: 10px;
+}
+
+.servizio img {
+    width: 100%;
+    height: auto;
+}
+
+.servizio {
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.prezzo, .durata {
+    font-size: 14px;
+    color: #e6a27b;
+}
+/* Stile per la sezione Hero */
+.hero {
+    background-image: url('https://via.placeholder.com/1500x800'); /* Aggiungi una bella immagine di sfondo, preferibilmente di un salone elegante */
+    background-size: cover;
+    background-position: center;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    position: relative;
+    overflow: hidden;
+}
+
+/* Sovrapposizione trasparente */
+.hero-overlay {
+    background: rgba(0, 0, 0, 0.5); /* Sovrapposizione scura per migliorare la leggibilità del testo */
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Contenuto della sezione Hero */
+.hero-content {
+    text-align: center;
+    max-width: 800px;
+    padding: 20px;
+}
+
+/* Titolo Hero */
+.hero h1 {
+    font-size: 3.5rem;
+    font-weight: 700;
+    margin-bottom: 20px;
+    letter-spacing: 1px;
+    text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.5);
+}
+
+/* Paragrafo Hero */
+.hero p {
+    font-size: 1.3rem;
+    margin-bottom: 30px;
+    line-height: 1.6;
+    max-width: 600px;
+    margin-left: auto;
+    margin-right: auto;
+    text-shadow: 1px 1px 6px rgba(0, 0, 0, 0.4);
+}
+
+/* Bottone di Call-to-Action */
+.cta-button {
+    background-color: #080807;
+    color: white;
+    padding: 16px 40px;
+    font-size: 1.2rem;
+    text-decoration: none;
+    border-radius: 50px;
+    transition: all 0.3s ease;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+
+.cta-button:hover {
+    background-color: #0c0c0c;
+    transform: translateY(-5px);
+}
+.delete-button {
+    background-color: #605656;
+    color: white;
+    border: none;
+    padding: 5px 10px;
+    cursor: pointer;
+}
+
+.delete-button:hover {
+    background-color: #786462;
+}
+/* Stile Generale */
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #F5F5F5;  /* Colore di sfondo soft */
+    color: #f4ca8b;  /* Testo scuro per contrasto */
+    margin: 0;
+    padding: 0;
+}
+
+/* Container centrale */
+.container {
+    max-width: 900px;
+    margin: 40px auto;
+    padding: 20px;
+    background-color: #ffffff;  /* Colore di sfondo bianco */
+    border-radius: 8px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);  /* Ombra morbida per un effetto di profondità */
+}
+
+/* Header */
+h1 {
+    text-align: center;
+    color: #494441;  /* Colore scuro per il titolo */
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+}
+
+/* Modulo di Prenotazione */
+.form-group label {
+    display: block;
+    margin-bottom: 8px;
+    font-size: 1.1rem;
+    color: #0e0d0d;  /* Colore grigio scuro per le etichette */
+}
+
+.form-input, .form-select {
+    width: 100%;
+    padding: 12px;
+    margin-bottom: 15px;
+    border-radius: 6px;
+    border: 1px solid #BDC3C7;  /* Colore grigio per il bordo */
+    font-size: 1rem;
+    background-color: #ecf0f1;  /* Sfondo chiaro per input */
+}
+
+.form-input:focus, .form-select:focus {
+    border-color: #60b4ed;  /* Colore blu per focus */
+    box-shadow: 0 0 5px rgba(52, 152, 219, 0.5);
+}
+
+/* Pulsante Prenotazione */
+.form-button {
+    background-color: #76b6e0;  /* Blu brillante */
+    color: white;
+    padding: 15px;
+    font-size: 1.1rem;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    width: 100%;
+    text-align: center;
+}
+
+.form-button:hover {
+    background-color: #cdf19b;  /* Colore blu più scuro per hover */
+}
+
+/* Messaggio di Conferma */
+.confirmation-message {
+    display: none;
+    background-color: #70c267;  /* Verde chiaro per messaggio di conferma */
+    color: white;
+    padding: 15px;
+    border-radius: 6px;
+    text-align: center;
+    margin-top: 20px;
+}
+
+.alert-message {
+    display: none;
+    background-color: #fbebe9;  /* Bianco per messaggio di errore */
+    color: white;
+    padding: 15px;
+    border-radius: 6px;
+    text-align: center;
+    margin-top: 20px;
+}
+
+/* Tabelle delle prenotazioni */
+table {
+    width: 100%;
+    margin-top: 20px;
+    border-collapse: collapse;
+}
+
+th, td {
+    padding: 15px;
+    text-align: center;
+    border: 1px solid #BDC3C7;  /* Bordo grigio chiaro */
+}
+
+th {
+    background-color: #3498DB;  /* Colore blu per intestazione */
+    color: white;
+    font-size: 1.1rem;
+}
+
+tr:nth-child(even) {
+    background-color: #f9f9f9;  /* Righe alternate chiare */
+}
+
+tr:hover {
+    background-color: #ecf0f1;  /* Colore grigio chiaro quando si passa sopra con il mouse */
+}
+
+/* Pulsante per eliminare la prenotazione */
+.delete-button {
+    background-color: #E74C3C;  /* Colore rosso per il pulsante elimina */
+    color: white;
+    padding: 8px 16px;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.delete-button:hover {
+    background-color: #9cdff8;  /* Colore rosso più scuro per hover */
+}
+.delete-button {
+    background-color: #ee1c1c;
+    color: white;
+    padding: 5px 10px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.delete-button:hover {
+    background-color: #f91212;
+}
+#servizi img {
+    width: 150px;  /* Puoi regolare la larghezza in base alle tue esigenze */
+    height: auto;  /* Impostando l'altezza a "auto", manterrai le proporzioni originali dell'immagine */
+}
+/* Sfondo generale */
+body {
+    background-color: #F4F8FB; /* Azzurro chiaro */
+    color: #4A4A4A; /* Testo in grigio scuro */
+    font-family: Arial, sans-serif;
+}
+
+/* Sfondo sezioni */
+section {
+    background-color: #E3F2F1; /* Verde menta chiaro */
+    padding: 20px;
+    border-radius: 8px;
+    margin-bottom: 20px;
+}
+
+/* Colori dei titoli */
+h2 {
+    color: #1E2A47; /* Blu navy scuro per i titoli */
+}
+
+/* Colori dei pulsanti */
+button, .form-button {
+    background-color: #A2DFF7; /* Blu pastello */
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+/* Hover pulsanti */
+button:hover, .form-button:hover {
+    background-color: #5DB4D8; /* Azzurro più scuro */
+}
+
+/* Colori delle card o servizi */
+.servizio {
+    background-color: #FFFFFF; /* Bianco per far risaltare le immagini */
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    transition: transform 0.3s ease;
+}
+
+/* Hover delle card */
+.servizio:hover {
+    transform: translateY(-10px); /* Effetto di sollevamento quando si passa sopra */
+}
+
+/* Colore delle descrizioni */
+p {
+    color: #616161; /* Grigio medio per il testo */
+}
+
+/* Colore dei prezzi */
+.prezzo {
+    color: #FF7043; /* Rosa corallo per i prezzi */
+    font-weight: bold;
+}
+
+/* Colore durate */
+.durata {
+    color: #607D8B; /* Grigio azzurro per la durata */
+}
+/* Stili generali per la barra di navigazione */
+nav {
+    background-color: #333; /* Colore scuro di sfondo */
+    padding: 10px 20px;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 1000;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Ombra per effetto sollevato */
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    transition: all 0.3s ease;
+}
+
+/* Logo */
+nav .logo a {
+    color: #fff;
+    font-size: 24px;
+    font-weight: bold;
+    text-decoration: none;
+    text-transform: uppercase;
+}
+
+/* Menu principale */
+nav #menu {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    align-items: center;
+}
+
+/* Stili per i link del menu */
+nav #menu li {
+    margin: 0 15px;
+}
+
+nav #menu a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 18px;
+    padding: 10px 15px;
+    display: block;
+    border-radius: 5px;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+/* Effetto hover per i link */
+nav #menu a:hover {
+    background-color: #ff7f50; /* Colore di sfondo arancione */
+    color: #fff;
+}
+
+/* Icona hamburger per dispositivi mobili */
+.menu-icon {
+    display: none;
+    cursor: pointer;
+    color: #fff;
+    font-size: 30px;
+}
+
+/* Stili per dispositivi mobili */
+@media (max-width: 768px) {
+    /* Menu in modalità mobile (nascosto inizialmente) */
+    nav #menu {
+        display: none;
+        width: 100%;
+        background-color: #333;
+        position: absolute;
+        top: 60px; /* Distanza sotto la barra di navigazione */
+        left: 0;
+        padding: 10px 0;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    /* Visualizzazione del menu mobile quando il toggle è attivo */
+    nav #menu.active {
+        display: flex;
+    }
+
+    /* Icona hamburger visibile solo su mobile */
+    .menu-icon {
+        display: block;
+    }
+
+    /* Modifica l'aspetto del link del menu in modalità mobile */
+    nav #menu li {
+        margin: 10px 0;
+    }
+
+    nav #menu a {
+        font-size: 22px;
+        padding: 15px;
+        width: 100%;
+        text-align: center;
+    }
+}
+
+/* Aggiungi transizione per l'animazione del menu mobile */
+nav #menu.active {
+    transform: translateY(0);
+    transition: transform 0.3s ease-in-out;
+}
+/* Sezione Hero */
+.hero {
+    background: url('https://via.placeholder.com/1920x800') no-repeat center center/cover; /* Aggiungi immagine di sfondo accattivante */
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    text-align: center;
+    color: white;
+    overflow: hidden;
+    background-size: cover;
+}
+
+/* Sovrapposizione del fondo */
+.hero-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.4); /* Sovrapposizione scura per migliorare la leggibilità del testo */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Contenuto della sezione hero */
+.hero-content {
+    z-index: 1;
+    color: white;
+    text-align: center;
+    padding: 20px;
+    max-width: 800px;
+    font-family: 'Arial', sans-serif;
+}
+
+/* Titolo */
+.hero h1 {
+    font-size: 3.5rem;
+    margin-bottom: 20px;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    font-weight: bold;
+    color: #ff7f50; /* Colore accattivante per il titolo */
+    text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.4); /* Ombra al testo per un effetto 3D */
+}
+
+/* Paragrafo */
+.hero p {
+    font-size: 1.25rem;
+    margin-bottom: 30px;
+    font-weight: 300;
+    line-height: 1.6;
+}
+
+/* Pulsante "Prenota Ora" */
+.cta-button {
+    display: inline-block;
+    padding: 15px 40px;
+    background-color: #ff7f50; /* Colore del pulsante */
+    color: white;
+    text-decoration: none;
+    font-size: 1.2rem;
+    font-weight: bold;
+    border-radius: 50px; /* Bordo arrotondato */
+    transition: background-color 0.3s ease, transform 0.3s ease;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Aggiungi ombra per effetto */
+}
+
+/* Effetto hover sul pulsante */
+.cta-button:hover {
+    background-color: #e66e3d; /* Colore più scuro per il pulsante al passaggio del mouse */
+    transform: scale(1.1); /* Aumenta leggermente la dimensione del pulsante */
+}
+
+/* Media query per dispositivi mobili */
+@media (max-width: 768px) {
+    .hero h1 {
+        font-size: 2.5rem; /* Ridurre la dimensione del titolo per dispositivi mobili */
+    }
+
+    .hero p {
+        font-size: 1rem; /* Ridurre la dimensione del paragrafo per dispositivi mobili */
+    }
+
+    .cta-button {
+        padding: 12px 30px; /* Ridurre la dimensione del pulsante */
+        font-size: 1.1rem;
+    }
+}
+/* Sezione Hero che occupa tutta la pagina */
+.hero {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;  /* Imposta l'altezza della sezione alla dimensione della finestra */
+    background: url('https://via.placeholder.com/1920x1080') no-repeat center center/cover; /* Immagine di sfondo che copre tutta la sezione */
+    text-align: center;
+    color: white;
+    position: relative;
+}
+
+/* Sovrapposizione del fondo */
+.hero-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.4); /* Sovrapposizione scura per migliorare la leggibilità del testo */
+}
+
+/* Contenuto della sezione Hero */
+.hero-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    padding: 20px;
+    position: relative;
+    max-width: 1200px; /* Limita la larghezza del contenuto */
+}
+
+/* Testo */
+.hero-text {
+    z-index: 1;
+    color: white;
+    max-width: 50%;
+    padding-right: 20px;
+}
+
+.hero h1 {
+    font-size: 3.5rem;
+    margin-bottom: 20px;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    font-weight: bold;
+    color: #ff7f50; /* Colore accattivante per il titolo */
+    text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.4); /* Ombra al testo per un effetto 3D */
+}
+
+.hero p {
+    font-size: 1.25rem;
+    margin-bottom: 30px;
+    font-weight: 300;
+    line-height: 1.6;
+}
+
+/* Immagine */
+.hero-image img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 8px;
+}
+
+/* Pulsante "Prenota Ora" */
+.cta-button {
+    display: inline-block;
+    padding: 15px 40px;
+    background-color: #ff7f50; /* Colore del pulsante */
+    color: white;
+    text-decoration: none;
+    font-size: 1.2rem;
+    font-weight: bold;
+    border-radius: 50px; /* Bordo arrotondato */
+    transition: background-color 0.3s ease, transform 0.3s ease;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Aggiungi ombra per effetto */
+}
+
+/* Effetto hover sul pulsante */
+.cta-button:hover {
+    background-color: #e66e3d; /* Colore più scuro per il pulsante al passaggio del mouse */
+    transform: scale(1.1); /* Aumenta leggermente la dimensione del pulsante */
+}
+
+/* Media query per dispositivi mobili */
+@media (max-width: 768px) {
+    .hero-content {
+        flex-direction: column; /* Imposta il layout a colonna per schermi più piccoli */
+        text-align: center;
+    }
+
+    .hero-text {
+        max-width: 100%;
+        padding-right: 0;
+    }
+
+    .hero h1 {
+        font-size: 2.5rem; /* Ridurre la dimensione del titolo per dispositivi mobili */
+    }
+
+    .hero p {
+        font-size: 1rem; /* Ridurre la dimensione del paragrafo per dispositivi mobili */
+    }
+
+    .cta-button {
+        padding: 12px 30px; /* Ridurre la dimensione del pulsante */
+        font-size: 1.1rem;
+    }
+
+    .hero-image img {
+        max-width: 80%; /* Ridurre la dimensione dell'immagine su dispositivi mobili */
+    }
+}
+/* Hero Section */
+.hero {
+    height: 70vh; /* Aumentato da 50vh a 70vh per una maggiore visibilità dell'immagine */
+    background: url('https://via.placeholder.com/1920x1080') no-repeat center center/cover;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    color: white;
+    position: relative;
+}
+
+.hero-overlay {
+    background: rgba(0, 0, 0, 0.3);
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
+.hero-content {
+    z-index: 1;
+    padding: 15px;
+    max-width: 80%;
+}
+
+.hero h1 {
+    font-size: 2rem; /* Aumentato per dare più visibilità */
+    margin-bottom: 15px;
+    font-weight: bold;
+    text-transform: uppercase;
+    color: #ff7f50;
+}
+
+.hero p {
+    font-size: 1.2rem; /* Un po' più grande per maggiore leggibilità */
+    margin-bottom: 20px;
+}
+
+.cta-button {
+    background-color: #ff7f50;
+    color: white;
+    padding: 10px 30px; /* Aumentato il padding */
+    border-radius: 30px;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 1.1rem;
+}
+
+.cta-button:hover {
+    background-color: #e66e3d;
+}
+/* Hero Section */
+.hero {
+    height: 70vh; /* Mantieni l'altezza maggiore per una visibilità migliore */
+    background: url('https://via.placeholder.com/1920x1080') no-repeat center center/cover;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    color: white;
+    position: relative;
+}
+
+.hero-overlay {
+    background: rgba(0, 0, 0, 0.3);
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
+.hero-content {
+    z-index: 1;
+    padding: 15px;
+    max-width: 80%;
+}
+
+.hero h1 {
+    font-size: 2rem; /* Modifica per un testo leggibile */
+    margin-bottom: 15px;
+    font-weight: bold;
+    text-transform: uppercase;
+    color: #ff7f50;
+}
+
+.hero p {
+    font-size: 1.2rem;
+    margin-bottom: 20px;
+}
+
+.cta-button {
+    background-color: #ff7f50;
+    color: white;
+    padding: 10px 30px;
+    border-radius: 30px;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 1.1rem;
+}
+
+.cta-button:hover {
+    background-color: #e66e3d;
+}
+
+/* Media Queries per dispositivi mobili */
+@media (max-width: 768px) {
+    .hero {
+        height: 50vh; /* Ridurre l'altezza su schermi più piccoli */
+    }
+
+    .hero h1 {
+        font-size: 1.8rem; /* Ridurre la dimensione del titolo */
+    }
+
+    .hero p {
+        font-size: 1rem; /* Ridurre la dimensione del paragrafo */
+    }
+
+    .cta-button {
+        padding: 10px 25px; /* Ridurre il padding per il bottone */
+        font-size: 1rem; /* Ridurre la dimensione del testo nel bottone */
+    }
+
+    .hero-content {
+        max-width: 90%; /* Aumenta la larghezza del contenuto */
+    }
+}
+
+/* Media Query per dispositivi mobili (smartphone) */
+@media (max-width: 480px) {
+    .hero {
+        height: 40vh; /* Ancora più ridotto su schermi molto piccoli */
+    }
+
+    .hero h1 {
+        font-size: 1.5rem; /* Ulteriore riduzione della dimensione del titolo */
+    }
+
+    .hero p {
+        font-size: 0.9rem; /* Ridurre ulteriormente la dimensione del testo */
+    }
+
+    .cta-button {
+        padding: 10px 20px; /* Ridurre il padding del bottone */
+        font-size: 0.9rem; /* Ancora più piccolo per il bottone */
+    }
+}
